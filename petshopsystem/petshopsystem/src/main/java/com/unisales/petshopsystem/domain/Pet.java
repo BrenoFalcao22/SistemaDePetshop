@@ -47,4 +47,6 @@ public class Pet {
     private List<Vacina> vacinas = new ArrayList<>();
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
     private List<HistoricoEvolucao> historicoEvolucao = new ArrayList<>();
+
+    public record Input(String name, Long proprietarioId, Integer idade, String sexo, String especie, String raca) {}
 }

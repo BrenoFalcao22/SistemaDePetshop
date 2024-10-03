@@ -31,4 +31,6 @@ public class Usuario {
     private String email;
     @Column(nullable = false, length = 10)
     private String grupo;
+
+    public record Input(String name, String sexo, String senha, String email, String grupo) {}
 }

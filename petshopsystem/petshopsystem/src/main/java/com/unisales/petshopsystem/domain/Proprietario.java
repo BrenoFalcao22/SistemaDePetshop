@@ -40,4 +40,6 @@ public class Proprietario {
     
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Pet> pet = new ArrayList<>();
+
+    public record Input(String name, String sexo, String cpf, String email, String celular) {}
 }
